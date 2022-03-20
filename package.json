@@ -1,0 +1,39 @@
+{
+  "name": "dogewatch-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/index.js",
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc -w & nodemon dist/index.js & wait",
+    "watch-ts": "tsc -w",
+    "watch-node": "nodemon dist/index.js",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Adrian-stuff/dogewatch-server.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Adrian-stuff/dogewatch-server/issues"
+  },
+  "homepage": "https://github.com/Adrian-stuff/dogewatch-server#readme",
+  "dependencies": {
+    "axios": "^0.26.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.0",
+    "express": "^4.17.3",
+    "nedb": "^1.8.0",
+    "socket.io": "^4.4.1",
+    "typescript": "^4.6.2",
+    "validator": "^13.7.0"
+  },
+  "devDependencies": {
+    "@types/express": "^4.17.13",
+    "@types/nedb": "^1.8.12",
+    "@types/socket.io": "^3.0.2",
+    "@types/validator": "^13.7.1"
+  }
+}
