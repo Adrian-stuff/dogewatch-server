@@ -18,7 +18,7 @@ import { DefaultEventsMap } from "socket.io/dist/typed-events";
 
 // init db
 
-type Document = {
+export type Document = {
   roomID: string;
   playerData: { videoID: string; status: number; time?: number };
   users: { username: string; isAdmin: boolean; socketID: string }[];

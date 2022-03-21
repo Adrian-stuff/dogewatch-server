@@ -1,5 +1,8 @@
 // ROOM
-export enum RoomSentEvents {}
+export enum RoomSentEvents {
+  USER_JOINED = "userJoined",
+  USER_LEAVE = "userLeave",
+}
 export enum RoomReceivedEvents {
   JOIN_ROOM = "joinRoom",
   CREATE_ROOM = "createRoom",

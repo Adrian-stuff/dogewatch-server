@@ -4,6 +4,7 @@ import {
   PlayerReceivedEvents,
   PlayerSentEvents,
   RoomReceivedEvents,
+  RoomSentEvents,
 } from "./socketEvents";
 
 export type ServerType = Server<
@@ -25,6 +26,8 @@ export interface ServerToClientEvents {
   [PlayerSentEvents.SET_PLAYERSTATUS]: (status: number) => void;
   [PlayerSentEvents.SET_PLAYERTIMESTAMP]: (time: number) => void;
   // ROOM
+  [RoomSentEvents.USER_JOINED]: (username: string) => void;
+  [RoomSentEvents.USER_LEAVE]: (username: string) => void;
 }
 
 type callback = ({
@@ -61,4 +64,5 @@ export interface ClientToServerEvents {
 
 export interface SocketData {
   roomID: string;
+  username: string;
 }
